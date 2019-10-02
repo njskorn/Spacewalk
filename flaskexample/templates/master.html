@@ -1,0 +1,91 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
+
+    <title>Spacewalk: find space for your walk</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/starter-template.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <br></br>
+
+    <div class="container">
+
+    <div style="background-transparent" class="jumbotron">
+        <h2 class="display-4">Welcome to Spacewalk</h2>
+        <h4><em>find enough space for your walk</em></h4>
+        <br>
+        <p class='lead'>Please enter your origin and destination within the SOMA neighborhood<br>
+          for information about sidewalk quality and active construction sites that may interfere with your route</p>
+        <hr class="my-4">
+
+        <form  action="/go" method="GET">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="origin">Origin:</label>
+              <input type="text" class="form-control" id="origin" name="origin" placeholder="starting from...">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="destination">Destination</label>
+              <input type="text" class="form-control" id="destination" name="destination" placeholder="going to...">
+            </div>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-info btn-lg">Rate the accessibility of my route!</button>
+          </div>
+        </form>
+    </div>
+
+    <div class = "container">
+      <div class="card">
+        <div class="card-body">
+      <form  action="/go" method=["GET","POST"]>
+        <div class="route_options">
+          <p><h4>Is today a good day for a walk?</h4></p>
+          <br>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <a class="btn btn-secondary" href="https://weather.com/weather/today/l/San+Francisco+CA+USCA0987:1:US" role="button">What's the weather like today?</a>
+            </div>
+            <div class="form-group col-md-4">
+                <a class="btn btn-secondary" href="https://www.google.com/search?q=giants+schedule" role="button">Is there a Giants game today?</a>
+            </div>
+            <div class="form-group col-md-4">
+              <a class="btn btn-secondary" href="https://www.google.com/search?q=warriors+schedule" role="button">Is there a Warriors game today?</a>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+  </div> <!-- /.container-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+  </body>
+</html>
