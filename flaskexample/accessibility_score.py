@@ -19,7 +19,7 @@ def accessibility_score(gdf):
     if gdf['curbrampwo'].max() == 0:
         curb = 1
     else:
-        curb = 1-(sum(gdf['curbrampwo'])/len(gdf))
+        curb = 1-(sum(list(gdf['curbrampwo']))/len(gdf))
 
     # pavement quality
     pavement = np.nanmin(gdf['PCI_Score'])/100
