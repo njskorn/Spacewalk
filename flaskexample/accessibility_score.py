@@ -16,7 +16,7 @@ def accessibility_score(gdf):
 
     print(gdf.columns)
     # curb ramp work
-    if sum(gdf['curbrampwo'].astype(int)) == 0:
+    if gdf['curbrampwo'].max() == 0:
         curb = 1
     else:
         curb = 1-(sum(gdf['curbrampwo'])/len(gdf))
