@@ -29,6 +29,6 @@ def accessibility_score(gdf):
     width = sum(gdf['route_width_preds'])/len(gdf)
     #print("curb: {}, pavement: {}, width: {}".format(curb, pavement, width))
 
-    score=(curb+pavement+width)/3
+    score=((curb+pavement+width)*100)/3
 
-    return score
+    return round(score,1)
