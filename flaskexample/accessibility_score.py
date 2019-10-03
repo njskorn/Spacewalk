@@ -16,6 +16,7 @@ def accessibility_score(gdf):
 
     print(gdf.columns)
     # curb ramp work
+    gdf['curbrampwo'] = gdf['curbrampwo'].map({'T': 1, '?': 0})
     if gdf['curbrampwo'].max() == 0:
         curb = 1
     else:
