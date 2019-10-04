@@ -96,12 +96,14 @@ def go():
     # merge with html_instructions
     poly_route['html']=output
 
-    # clean up formatting for final presentation
+    # clean up formatting for table presentation on output page
     for index in range(len(poly_route)):
         poly_route.loc[index]['Construction'] = [x for x in poly_route.loc[index]['Construction'] if str(x) != 'nan']
     poly_route['Construction'] = poly_route['Construction'].apply(lambda y: np.nan if len(y)==0 else y)
     poly_route['Construction'].fillna('No construction', inplace=True)
     poly_route['PCI_Score'].fillna('No record', inplace=True)
+    poly_route['curbrampwo'].fillna('Yes', inplace=True)
+    poly_route['curbrampwo'] = poly_route['curbrampwo'].map({'Yes':'Yes','?': 'Yes', 'T': 'No'})
     poly_route = pretty_construction(poly_route)
     poly_route['route_width_preds'] = poly_route['route_width_preds'].map({1: 'Yes', 0: 'No'})
 

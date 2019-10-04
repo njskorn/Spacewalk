@@ -10,7 +10,6 @@ pretty_dict={'TableChair':"A restaurant's table and chairs are occupying part of
                      'ExcStreet':"Street excavation that may encroach on the sidewalk"}
 
 def pretty_construction(route):
-    print(route.columns())
     for i in range(0,len(route)):
         for index, data in enumerate(route.loc[i]['Construction']):
             for dict_key, value in pretty_dict.items():
