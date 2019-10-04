@@ -3,12 +3,14 @@ import pandas as pd
 pretty_dict={'TableChair':"A restaurant's table and chairs are occupying part of the sidewalk",
                      'Wireless':"Wireless cable construction",
                      'MinorEnc':"Minor sidewalk encroachment",
-                     'Excavation':"Excavation",
+                     'Excavation':"Sidewalk excavation",
                      'TempOccup':"Temporary sidewalk occupation",
                      'StrtImprov':"Street improvement work",
-                     'AddlStSpac':"Additional street space request"}
+                     'AddlStSpac':"Additional street space request",
+                     'ExcStreet':"Street excavation that may encroach on the sidewalk"}
 
 def pretty_construction(route):
+    print(poly_route.head())
     for i in range(0,len(route)):
         for index, data in enumerate(route.loc[i]['Construction']):
             for dict_key, value in pretty_dict.items():
