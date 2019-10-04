@@ -65,6 +65,7 @@
       <col width="250">
       <col width="100">
       <col width="100">
+      <col width="100">
       <tr><th>Steps on your Journey</th><th>Sidewalk Permits and<br>Active Construction</th><th>Sidewalk<br>Pavement Quality</th><th>Minimum 5ft of<br>Usable Sidewalk</th><th>Ramping Curb</th></tr>
       {% for index,row in route_steps.iterrows(): %}
       <tr><td>{{ row['html'] }}</td><td>{{ (", ".join(row['Construction'])) }}</td><td>{{ row['PCI_Score'] }}</td><td>{{ row['route_width_preds'] }}</td><td>{{ row['curbrampwo'] }}</td></tr>
